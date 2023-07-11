@@ -15,7 +15,7 @@ class ItemStatus:
             next_index = current_index + 1
             return cls.STATUSES[next_index]
         except IndexError:
-            return cls.STATUSES[-1]
+            return cls.STATUSES[4]
 
     @classmethod
     def previous(cls, current):
@@ -24,6 +24,6 @@ class ItemStatus:
             previous_index = current_index - 1
             return cls.STATUSES[previous_index]
         except IndexError:
-            return cls.STATUSES[-1]
+            return cls.STATUSES[0]
 
     

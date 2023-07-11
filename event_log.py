@@ -12,8 +12,10 @@ class EventLog:
     
     @property
     def description(self):
+        if self._description == '':
+            raise ValueError('Cannot be empty!')
         return self._description
     
     def info(self):
-        timestamp_str = self._timestamp.strftime("%m/%d/%Y, %H:%M:%S")
-        return f'[{timestamp_str}] {self._description}'
+        timestamp_str = self.timestamp.strftime("%m/%d/%Y, %H:%M:%S")
+        return f'[{timestamp_str}] {self.description}'
