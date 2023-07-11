@@ -12,8 +12,10 @@ class BoardItem:
     
     def __init__(self, title: str, due_date: int):
         self.title = title
-        if self.title == '' or (len(self.title) < 5 and len(self.title) > 30):
+        if self.title == '':
             raise ValueError('Tile must NOT be empty!')
+        if len(self.title) < 5 or len(self.title) > 30:
+            raise ValueError('Title must have more that 5 characters and less that 30.')
         self.due_date = add_days_to_now(due_date)
         self.status = ItemStatus.OPEN
 

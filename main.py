@@ -3,7 +3,7 @@ from board import Board
 
 
 def main():
-    item = BoardItem("Making files on the database", 2)
+    item = BoardItem('Registration doesn\'t work', 2)
     second_item = BoardItem('Encrypt user data', 10)
 
     item.advance_status()
