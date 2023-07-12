@@ -32,12 +32,10 @@ def main():
     # print(anotherItem.history())
 
 
-    # board = Board()
-    # board.add_item(item)
-    # board.add_item(another_item)
-    # board.add_item(item)
-    # board.add_item(item)
-    # print(board.count())
+    board = Board()
+    board.add_item(item)
+    board.add_item(another_item)
+    print(board.count)
     
     
     

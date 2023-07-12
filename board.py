@@ -11,11 +11,11 @@ class Board:
             self._items.append(item)
         else:
             raise ValueError('Item already in the list')
-
-    
-    def count(self) -> int:
-        counter = 0
-        for _ in self._items:
-            counter += 1
         
-        return counter
+    @property
+    def items(self):
+        return tuple(self._items)
+
+    @property
+    def count(self) -> int:
+        return len(self._items)
