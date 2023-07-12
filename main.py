@@ -13,7 +13,7 @@ def add_days_to_now(d):
 def main():
     
     item = BoardItem('Refactor this mess', add_days_to_now(2))
-    another_item = BoardItem('Maika ti deba', add_days_to_now(2))
+    anotherItem = BoardItem('Maika ti deba', add_days_to_now(2))
     # item.due_date += timedelta(days=365 * 2)  # two years in the future
     # item.title = 'Not that important'
     # item.revert_status()
@@ -32,10 +32,10 @@ def main():
     # print(anotherItem.history())
 
 
-    board = Board()
-    board.add_item(item)
-    board.add_item(another_item)
-    print(board.count)
+    # board = Board()
+    # board.add_item(item)
+    # board.add_item(another_item)
+    # print(board.count)
     
     
     
