@@ -2,6 +2,8 @@ from board_item import BoardItem
 from board import Board
 from datetime import date, timedelta
 from event_log import EventLog
+from task import Task
+from issues import Issue
 
 
 def add_days_to_now(d):
@@ -11,42 +13,23 @@ def add_days_to_now(d):
 
 
 def main():
-    
-    item = BoardItem('Refactor this mess', add_days_to_now(2))
-    anotherItem = BoardItem('Maika ti deba', add_days_to_now(2))
-    # item.due_date += timedelta(days=365 * 2)  # two years in the future
-    # item.title = 'Not that important'
-    # item.revert_status()
-    # item.advance_status()
-    # item.revert_status()
-    # print(item.history())
+    task = Task('Test the application flow', 'Steven', add_days_to_now(2))
+    task.advance_status()
+    task.advance_status()
+    task.assignee = 'Not Steven'
+    print(task.history())
 
-    # print('\n--------------\n')
+    # issue = Issue('App flow tests?', 'We need to test the flow!', add_days_to_now(1))
+    # issue.advance_status()
+    # issue.due_date += timedelta(days=1)
+    # print(issue.history())
 
-    # anotherItem = BoardItem('Dont refactor anything',  add_days_to_now(2))
-    # anotherItem.advance_status()
-    # anotherItem.advance_status()
-    # anotherItem.advance_status()
-    # anotherItem.advance_status()
-    # anotherItem.advance_status()
-    # print(anotherItem.history())
+    # issue = Issue('App flow tests?', 'We need to test the flow!', add_days_to_now(1))
+    # task = Task('Dont refactor anything', 'Pesho', add_days_to_now(2))
+    #
+    # for board_item in [issue, task]:
+    #     print(board_item.info())  # prints info like either an issue, or a task
 
-
-    # board = Board()
-    # board.add_item(item)
-    # board.add_item(another_item)
-    # print(board.count)
-    
-    
-    
-    # item.due_date += timedelta(days=365 * 2)
-    # item.title = 'Not that important'
-    # item.revert_status()
-    # item.advance_status()
-    # item.revert_status()
-    # print(item.history())
-    
 
 if __name__ == "__main__":
     main()
-
